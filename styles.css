@@ -42,7 +42,8 @@ h1 {
   background-color: var(--orange);
   cursor: pointer;
   border: none;
-  padding: 4px;
+  padding: 10px;
+  color: black;
 }
 
 .number-input {

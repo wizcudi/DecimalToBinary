@@ -32,55 +32,7 @@ const animationData = [
         removeElDelay: 10000
     }
 ]
-// EXAMPLE OF RECUSIVE
-// const countdown= (number)=>{
-//     console.log(number)
 
-//     if(number === 0){
-//         console.log("Reached base case");
-//         return
-//     }else{
-//         // recusive case,
-//         // 1) What is the base case?
-//         // 2) What is least amount of work needed to get closer to base case?
-//         countdown(number - 1)
-//         console.log(number);
-//     }
-// }
-// countdown(3);
-
-// resonsible for decimal to binary conversion
-// const decimalToBinary=(input)=>{
-//     const inputs = []
-//     const quotients = []
-//     const remainders = []
-
-//     if(input === 0){
-//         result.innerText ='0'
-//         return
-//     }
-
-//     while (input > 0){
-//         const quotient = Math.floor(input / 2);
-
-//         const remainder = input % 2;
-
-//         inputs.push(input)
-//         quotients.push(quotient);
-//         remainders.push(remainder);
-
-//         input = quotient;
-//     }
-
-//     console.log("Inputs: ", inputs);
-//     console.log("Quotients: ", quotients);
-//     console.log("Remainders: ", remainders) 
-
-//     // remainders array is the binary representation of numbers in reverse order
-//     // used .reverse() to reverse the order
-//     // and .join() with empty string as a separator 
-//     result.innerText=remainders.reverse().join('')
-// }
 
 // IMPROVED decimalBinary() function
 const decimalToBinary=(input)=>{
@@ -91,29 +43,11 @@ const decimalToBinary=(input)=>{
         return decimalToBinary(Math.floor(input / 2))+(input%2);
     }
 
-    // let binary = ''
-
-    // // for situations when code equals 0
-    // if(input === 0){
-    //     binary = '0'
-    // }
-
-    // while(input > 0){
-    //     input = Math.floor(input/2);
-
-    //     // used to reverse order
-    //     binary = (input % 2) + binary;
-    // }
-
-    // // displays result of conversion
-    // result.innerText = binary;
+    
 }
 
 // TESTING
 const showAnimation =()=>{
-    // setTimeout(()=>{console.log("free")},500)
-    // setTimeout(()=>{console.log("Code")},1000)
-    // setTimeout(()=>{console.log("Camp")},1500)
 
     result.innerText = "Call Stack Animation";
     animationData.forEach((obj)=>{
@@ -151,9 +85,6 @@ const checkUserInput = () => {
 
     const inputInt = parseInt(numberInput.value)
 
-    // testing by logging value attribute of numberInput
-    // console.log(numberInput.value)
-
     // 1st condition checks if falsy
     // common falsy values are null, undefined, 0 and empty string
     // parseInt checks and normalizes numbers
@@ -186,6 +117,8 @@ const checkUserInput = () => {
 convertBtn.addEventListener('click', checkUserInput)
 
 numberInput.addEventListener('keydown', (e)=>{
+    
+
     // checks if the Enter btn was pressed
     if(e.key==='Enter'){
         checkUserInput()
